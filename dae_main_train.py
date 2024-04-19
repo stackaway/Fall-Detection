@@ -1,7 +1,11 @@
 from models import *
-#from ImageExp import ImgExp
+# from ImageExp import ImgExp
+from tensorflow.keras.layers import Conv3DTranspose
 from ae_exp import AEExp
 import numpy as np
+from keras.optimizers import Adadelta
+opt = Adadelta(learning_rate=1.0)
+
 
 
 def init_dae_exp(pre_load = None, regularizer_list = []):

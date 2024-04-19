@@ -2,7 +2,8 @@ from keras.models import Sequential, Model
 from keras.layers import Conv2D, MaxPooling2D, UpSampling2D, MaxPooling3D, UpSampling3D, Conv3D, Conv2DTranspose
 from keras.layers import Activation, Dropout, Flatten, Dense, Input, Reshape
 
-from keras.layers import Deconvolution3D
+# from keras.layers import Deconvolution3D
+from tensorflow.keras.layers import Conv3DTranspose
 from keras.optimizers import SGD
 from keras import regularizers
 from keras.layers import LSTM, RepeatVector, concatenate

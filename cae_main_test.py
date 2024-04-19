@@ -3,7 +3,7 @@ from ae_exp import *
 
 if __name__ == "__main__":
 	
-	pre_load = None #Put path to your saved model here!! It will be in Models/{dset}/model_name.h5
+	pre_load = '/Users/churnika/Desktop/Projects/Fall-Detection/Models/SDU-Filled/C3D_AE.h5' #Put path to your saved model here!! It will be in Models/{dset}/model_name.h5
 	dset = 'UR-Filled'
 
 

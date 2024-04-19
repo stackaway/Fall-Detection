@@ -1,6 +1,8 @@
-from keras.models import Sequential, Model
+# from keras.models import Sequential, Model
+from tensorflow.keras.models import Sequential, Model
 from keras.layers import Activation, Dropout, Flatten, Dense, Input, Reshape
-from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
+from tensorflow.keras.preprocessing.image import ImageDataGenerator,array_to_img, img_to_array, load_img
+# from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 from img_exp import ImgExp
 import numpy as np
 import matplotlib.pyplot as plt
@@ -12,7 +14,9 @@ import os
 from util import *
 from data_management import load_data
 import sys
-from multi_AEmodel import *
+# from multi_AEmodel import *
+from keras.layers import Conv3DTranspose
+
 
 class AEExp(ImgExp):
 	"""
@@ -167,7 +171,3 @@ class AEExp(ImgExp):
 		 img_width = self.img_width, img_height = self.img_height, vid_class = vid_class, dset = self.dset)
 		
 		self.train_data = data
-
-
-
-
