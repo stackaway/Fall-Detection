@@ -226,8 +226,8 @@ def DSTCAE_Deconv(img_width, img_height, win_length):
     encoded = MaxPooling3D((temp_pool, 2, 2), padding='same')(x)
 
 
-    x = Deconvolution3D(8, (temp_depth, 3, 3),strides = (2,2,2), activation='relu', padding='same')(encoded)
-    x = Deconvolution3D(16, (temp_depth, 3, 3),strides = (2,2,2), activation='relu', padding='same')(x)
+    x = Conv3DTranspose(8, (temp_depth, 3, 3),strides = (2,2,2), activation='relu', padding='same')(encoded)
+    x = Conv3DTranspose(16, (temp_depth, 3, 3),strides = (2,2,2), activation='relu', padding='same')(x)
     
     decoded = Conv3D(1, (temp_depth, 3, 3), activation='tanh', padding='same')(x)
 
